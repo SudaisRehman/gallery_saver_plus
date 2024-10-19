@@ -29,14 +29,12 @@ android {
     }
 
     compileOptions {
-        // Ensure both Java and Kotlin use the same JVM target version.
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17  // Change to 17
+        targetCompatibility = JavaVersion.VERSION_17  // Change to 17
     }
 
     kotlinOptions {
-        // Match Kotlin JVM target with Java target.
-        jvmTarget = '1_8'
+        jvmTarget = '17'  // Change to 17
     }
 
     lintOptions {
