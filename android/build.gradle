@@ -20,17 +20,23 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
-
-    // Add this line to specify the namespace.
     namespace 'carnegietechnologies.gallery_saver'
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
 
     defaultConfig {
         minSdkVersion 21
+        targetSdkVersion 30
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        // Ensure both Java and Kotlin use the same JVM target version.
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        // Match Kotlin JVM target with Java target.
+        jvmTarget = '1.8'
     }
 
     lintOptions {
