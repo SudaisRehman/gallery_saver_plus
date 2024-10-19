@@ -36,7 +36,7 @@ android {
 
     kotlinOptions {
         // Match Kotlin JVM target with Java target.
-        jvmTarget = '1.8'
+        jvmTarget = '1_8'
     }
 
     lintOptions {
